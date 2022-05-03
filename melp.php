@@ -1,17 +1,17 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+//ini_set('display_startup_errors', '1');
+//error_reporting(E_ALL);
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <link rel="stylesheet" type="text/css" href="assets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <meta name="description" content="a search engine">
-<title>melp</title>
+<title><?=$title?></title>
 
 <div class='wrapper'>
-<h1>melp</h1>
+<h1><?=$title?></h1>
 
 <div class='box search-container'>
 <form action="./">
