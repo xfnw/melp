@@ -1,0 +1,5 @@
+*.sqlite
+*.db
+*.sqlite.bak
+
+config.php

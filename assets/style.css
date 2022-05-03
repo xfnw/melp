@@ -1,0 +1,77 @@
+
+body {
+background: #141415;
+font-family: 'Liberation Mono', monospace;
+color: #cdcdcd;
+}
+
+.preview, .box {
+padding: 10px;
+margin-top: 10px;
+background-color: #222;
+}
+
+.wrapper {
+max-width: 700px;
+margin: 0 auto;
+}
+
+a {
+color: #3291FF;
+}
+
+h2 {
+margin: 0;
+padding: 0;
+margin-bottom: 5px;
+}
+
+.search-container input[type=text] {
+  padding: 6px;
+  margin-top: 3px;
+  font-size: 17px;
+  color: #cdcdcd;
+  background: #333;
+  border: 0;
+  width: calc(100% - 60px);
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 3px;
+  background: #333;
+  float: right;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color:#cdcdcd;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  
+    url('icomoon.woff?8kg27f') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon-search {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e986";
+}
+
