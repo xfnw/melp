@@ -21,15 +21,36 @@ error_reporting(E_ALL);
 </div>
 
 <?php
-require('config.php');
+global $url;
 
 if (isset($_GET['q']) && preg_replace('/\s+/', '', $_GET['q']) != '') {
 
+	$query = array('q' => $_GET['q']);
+
+	$postdata = json_encode($query);
+
+	$opts = array('http' =>
+		array(
+			'method'  => 'POST',
+			'header'  => 'Content-type: application/json',
+			'content' => $postdata
+		)
+	);
+
+	$context = stream_context_create($opts);
+
 	$data = file_get_contents($url,false,$context);
 
+	if ($data === false) {
+		echo '<div class="box">ut oh we could not contact the search server</div></div>';
+		exit();
+	}
 
+	$results = json_decode($data);
 
-	foreach ($results as $row) {
+	$leastres = false;
+	foreach ($results->hits as $row) {
+		$leastres = true;
 ?>
 
 <div class='box'>
@@ -40,7 +61,7 @@ if (isset($_GET['q']) && preg_replace('/\s+/', '', $_GET['q']) != '') {
 <?php
 
 	}
-	if (!$results)
+	if (!$leastres)
 		echo '<div class="box">No results.</div>';
 
 }
