@@ -16,6 +16,19 @@ max-width: 700px;
 margin: 0 auto;
 }
 
+.ib {
+display: inline-block;
+}
+
+.clear {
+clear: both;
+}
+
+img {
+float:left;
+margin-right: 10px;
+}
+
 a {
 color: #3291FF;
 }
