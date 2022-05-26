@@ -15,7 +15,7 @@
 
 <div class='box search-container'>
 <form action="?">
-      <input type="text" placeholder="Search.." name="q" value="<?php if (isset($_GET['q'])) {echo htmlspecialchars($_GET['q']); } ?>" autofocus>
+      <input type="text" placeholder="Search.." name="q" value="<?php if (isset($_GET['q'])) {echo htmlspecialchars($_GET['q']); } ?>" onfocus="this.select()" autofocus>
       <button type="submit"><i class="icon-search"></i></button>
     </form>
 </div>
