@@ -19,12 +19,10 @@
       <button type="submit"><i class="icon-search"></i></button>
     </form>
 </div>
-
 <?php
 global $url;
 
 if (isset($_GET['q']) && preg_replace('/\s+/', '', $_GET['q']) != '') {
-
 	$query = array('q' => $_GET['q']);
 
 	$postdata = json_encode($query);
@@ -52,7 +50,6 @@ if (isset($_GET['q']) && preg_replace('/\s+/', '', $_GET['q']) != '') {
 	foreach ($results->hits as $row) {
 		$leastres = true;
 ?>
-
 <div class='box'>
 <?php
 		handleItem($row);
@@ -63,7 +60,6 @@ if (isset($_GET['q']) && preg_replace('/\s+/', '', $_GET['q']) != '') {
 	}
 	if (!$leastres)
 		echo '<div class="box">No results.</div>';
-
 }
 ?>
 </div>
